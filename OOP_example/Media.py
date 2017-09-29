@@ -5,6 +5,6 @@ class Movie():
 		self.title = movie_title
 		self.storyline = movie_storyline
 		self.poster_image_url = movie_poster_image
-		self.trailer = movie_trailer
+		self.trailer_youtube_url = movie_trailer
 	def show_trailer(self):
 		webbrowser.open(self.trailer)
