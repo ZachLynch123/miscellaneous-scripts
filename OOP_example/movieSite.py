@@ -16,7 +16,9 @@ TCM = Media.Movie("A Texas Chainsaw Massacre", "REEEEEEEEEEEEEEEEEEE",
 	"https://images-na.ssl-images-amazon.com/images/I/51uBhqYdUZL._SY300_.jpg",
 	"https://www.youtube.com/watch?v=Vs3981DoINw")
 #Friday13th.show_trailer()
-Default = Media.Movie("Default","Desc","Picture","Trailer")
-movies = [toy_story,Friday13th,aNES, TCM]
+Saving_Private_Ryan = Media.Movie("Saving Private Ryan", "boom boom nazi killing",
+	"http://is5.mzstatic.com/image/thumb/Video/v4/66/83/44/668344c7-a8fa-107c-72f9-b1fdceb226c6/source/1200x630bb.jpg",
+	"https://www.youtube.com/watch?v=RYID71hYHzg")
+movies = [toy_story,Friday13th,aNES, TCM,Saving_Private_Ryan,]
 
 fresh_tomatoes.open_movies_page(movies)
