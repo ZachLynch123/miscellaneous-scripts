@@ -1,11 +1,11 @@
 import random
 import time
 
-password = ""
+password = "Sandwich"
 attempted_password = ""
-list_of_chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-for letter in range(0, random.randint(10, 25)):
-    password += list_of_chars[random.randint(0, 20)]
+list_of_chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()<>? "
+#for letter in range(0, random.randint(10, 25)):
+#    password += list_of_chars[random.randint(0, 20)]
 
 
 def timeit(func):
