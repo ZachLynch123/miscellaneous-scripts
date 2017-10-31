@@ -1,7 +1,7 @@
 import webbrowser
 import os
+import Media
 import re
-
 # Styles and scripting for the page
 main_page_head = '''
 <head>

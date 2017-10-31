@@ -22,9 +22,9 @@ Saving_Private_Ryan = Media.Movie("Saving Private Ryan", "boom boom nazi killing
 nb4c = Media.Movie("Nightmare Before Christmas", "bone daddy?",
 	"https://fanart.tv/fanart/movies/9479/movieposter/the-nightmare-before-christmas-54ebd7ec25354.jpg",
 	"https://www.youtube.com/watch?v=8qrB9I3DM80")
+Haunted = Media.Movie("The Haunted Mansion Audio", "so cute", "https://secure.cdn1.wdpromedia.com/resize/mwImage/1/630/354/75/dam/wdpro-assets/dlr/parks-and-tickets/attractions/disneyland/haunted-mansion/haunted-mansion-fog-00.jpg?1506534511496", 
+	"https://www.youtube.com/watch?v=FSU0AotiDjM")
 
-movies = [Up_movie,Friday13th,aNES, TCM,Saving_Private_Ryan,nb4c]
-print(Media.Movie.RATING)
-print(Media.Movie.__module__)
+movies = [Up_movie,Friday13th,aNES, TCM,Saving_Private_Ryan,nb4c, Haunted]
 
-#fresh_tomatoes.open_movies_page(movies)
+fresh_tomatoes.open_movies_page(movies)
