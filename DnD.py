@@ -30,3 +30,4 @@ for i in range (num_of_dice):
   d1 = Die()
   d.set_sides(sides_of_dice)
   print (d.roll())
+
