@@ -12,9 +12,9 @@ app = Flask(__name__)
 def index(user=None):
 	return render_template("user.html", user=user)
 
-@app.route("/shopping")
+@app.route("/things_to_do")
 def shopping():
-    food = ['cheese', 'tuna', 'beef']
+    food = ['love Allison', 'nap', 'love Allison']
     return render_template("shopping.html", food=food)
 
 
