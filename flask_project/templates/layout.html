@@ -5,12 +5,13 @@
     <title>MyFlaskApp</title>
     <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.min.css">
 </head>
-<body>
 
-    {% include 'includes/_navbar.html' %}
+<body>
+{% include '/includes/_navbar.html' %}
     <div class="container">
-        {% block body %} {% endblock %}
+      {% block body %} {% endblock %}
     </div>
+
 
     <script src="https://getbootstrap.com/dist/js/bootstrap.min.js">
 
