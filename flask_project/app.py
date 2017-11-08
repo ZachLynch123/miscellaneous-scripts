@@ -1,8 +1,10 @@
 # Just playing around with flask
 
 # Importing Flack modules, as well as my own data module
-from flask import Flask, render_template
+from flask import Flask, render_template, flash, redirect, url_for, session, logging
 from data import Articles
+from flask_mysqldb import MySQL
+
 
 # always needed
 app = Flask(__name__)
