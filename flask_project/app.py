@@ -3,6 +3,7 @@
 # Importing Flack modules, as well as my own data module
 from flask import Flask, render_template, flash, redirect, url_for, session, logging
 from data import Articles
+# added MySQL to macbook
 from flask_mysqldb import MySQL
 from wtforms import Form
 
