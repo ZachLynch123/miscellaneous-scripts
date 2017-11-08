@@ -4,7 +4,7 @@
 from flask import Flask, render_template, flash, redirect, url_for, session, logging
 from data import Articles
 from flask_mysqldb import MySQL
-
+from wtforms
 
 # always needed
 app = Flask(__name__)
