@@ -15,7 +15,7 @@ app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'Luigi102!'
-app.config['MYSQL_DB'] = 'flask_project'
+app.config['MYSQL_DB'] = 'myflaskapp'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 # init MYSQL
 mysql = MySQL(app)
@@ -59,8 +59,8 @@ def testing():
 
 class RegisterForm(Form):
     name = StringField('Name', [validators.Length(min=1, max=50)])
-    username = StringField('Username', [validators.Length(min=4, max=25)])
     email = StringField('Email', [validators.Length(min=6, max=50)])
+    username = StringField('Username', [validators.Length(min=4, max=25)])
     password = PasswordField('Password', [validators.DataRequired(), validators.EqualTo('confirm', message='Passwords do match')])
     confirm = PasswordField('confirm password')
 
@@ -78,7 +78,9 @@ def register():
         # Create cursor
         cur = mysql.connect.cursor()
         # Execute query
-        cur.execute("INSERT INTO users(name, email, username, password) VALUES (%s, %s, %s, %s)", (name, email, username, password))
+        columns = ('name', 'email', 'username', 'password')
+        values = (name, email, username, password)
+        cur.execute("""INSERT INTO users (name, email, username, password) VALUES ('zach', '123@gmail.com', 'haruc24', '1234')""")
         # Commit to DB
         mysql.connect.commit()
         # Close connection
@@ -92,6 +94,7 @@ def register():
 
 
 if __name__ =='__main__':
+    app.secret_key = 'secret123'
     app.run(debug=True)
 
 
