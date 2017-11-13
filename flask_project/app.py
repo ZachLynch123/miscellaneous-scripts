@@ -161,7 +161,7 @@ class ArticleForm(Form):
 @is_logged_in
 @app.route('/add_article', methods=['GET','POST'])
 
-def add_article(): 
+def add_article():
     form = ArticleForm(request.form)
     if request.method == 'POST' and form.validate():
         title = form.title.data
@@ -172,7 +172,7 @@ def add_article():
 
         #Execute
 
-        cur.execute("INSERT INTO articles(title, body,author) VALUES(%s, %s, %S)", (title, body, session['username']))
+        cur.execute("INSERT INTO articles(title, body,author) VALUES(%s, %s, %s)", (title, body, session['username']))
 
         # Commit to DB
 
@@ -192,7 +192,22 @@ def add_article():
 @app.route('/dashboard')
 @is_logged_in
 def dashboard():
-    return render_template('dashboard.html')
+
+    # Create cursor
+    cur = mysql.connection.cursor()
+    msg = 'No Articles Found'
+    # Get articles
+    result = cur.execute("SELECT * FROM articles")
+
+    articles = cur.fetchall()
+
+    if result > 0:
+       return render_template('dashboard.html', articles=articles)
+    else:
+        return render_template('dashboard.html', msg=msg)
+
+    # Close connection
+    cur.close()
 
 
 if __name__ =='__main__':
