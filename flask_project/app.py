@@ -76,13 +76,14 @@ def register():
         password = sha256_crypt. encrypt(str(form.password.data))
 
         # Create cursor
-        cur = mysql.connect.cursor()
+        cur = mysql.connection.cursor()
         # Execute query
         columns = ('name', 'email', 'username', 'password')
         values = (name, email, username, password)
-        cur.execute("""INSERT INTO users (name, email, username, password) VALUES ('zach', '123@gmail.com', 'haruc24', '1234')""")
+        cur.execute("""INSERT INTO users (name, email, username, password) VALUES ('%s', '%s', '%s', '%s')"""\
+                    % (name, email, username, password))
         # Commit to DB
-        mysql.connect.commit()
+        mysql.connection.commit()
         # Close connection
         cur.close()
 
@@ -91,6 +92,43 @@ def register():
         redirect(url_for('index'))
 
     return render_template('register.html', form=form)
+
+# User login
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        # Get Form Fields
+        username = request.form['username']
+        password_candidate = request.form['password']
+
+        # Create Cursor
+        cur = mysql.connection.cursor()
+
+        # Get user by username
+        result = cur.execute("SELECT * FROM users WHERE username = %s",[username])
+        if result > 0:
+            # Get stored hash
+            data = cur.fetchone()
+            password = data['password']
+
+            # Compare Passwords
+            if sha256_crypt.verify(password_candidate,password):
+                # Passed
+                # Create session
+                session['logged_in'] = True
+                session['username'] = username
+                flash('You are now logged in', 'success')
+                return redirect(url_for('dashboard.html'))
+
+            else:
+                error = 'Invalid login'
+                app.logger.info('PASSWORD MISMATCH')
+                return render_template('login.html', error=error)
+        else:
+            error = 'Username not found'
+            return render_template('login.html', error=error)
+
+    return render_template('login.html')
 
 
 if __name__ =='__main__':
