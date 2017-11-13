@@ -124,6 +124,8 @@ def login():
                 error = 'Invalid login'
                 app.logger.info('PASSWORD MISMATCH')
                 return render_template('login.html', error=error)
+            # Close connection
+            cur.close()
         else:
             error = 'Username not found'
             return render_template('login.html', error=error)
