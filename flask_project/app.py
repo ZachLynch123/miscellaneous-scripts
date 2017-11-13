@@ -7,6 +7,7 @@ from data import Articles
 from flask_mysqldb import MySQL
 from wtforms import Form, StringField, TextAreaField, PasswordField, validators
 from passlib.hash import sha256_crypt
+from functools import wraps
 
 # always needed
 app = Flask(__name__)
@@ -47,7 +48,7 @@ def articles():
 # adds a variable to the address
 @app.route('/article/<string:id>/')
 
-#
+# Single artice
 def article_id(id):
     return render_template('article.html', id=id)
 @app.route('/testing')
@@ -64,6 +65,8 @@ class RegisterForm(Form):
     password = PasswordField('Password', [validators.DataRequired(), validators.EqualTo('confirm', message='Passwords do match')])
     confirm = PasswordField('confirm password')
 
+
+# User Register
 @app.route('/register', methods=['GET', 'POST'])
 def register():
 
@@ -73,7 +76,7 @@ def register():
         name = form.name.data
         email = form.email.data
         username = form.username.data
-        password = sha256_crypt. encrypt(str(form.password.data))
+        password = sha256_crypt.encrypt(str(form.password.data))
 
         # Create cursor
         cur = mysql.connection.cursor()
@@ -131,7 +134,63 @@ def login():
             return render_template('login.html', error=error)
 
     return render_template('login.html')
+
+# Check if user is logged in
+def is_logged_in(f):
+    @wraps(f)
+    def wrap(*args, **kwargs):
+        if 'logged_in' in session:
+            return f(*args,**kwargs)
+        else:
+            flash('Unauthorized, please log in', 'danger')
+            return redirect(url_for('login'))
+    return wrap
+
+# Log out
+@app.route('/logout')
+def logout():
+    session.clear()
+    flash('You are now logged out', 'success')
+    return redirect(url_for('login'))
+
+# Article Form class
+
+class ArticleForm(Form):
+    title = StringField('Title', [validators.length(min=1, max=200)])
+    body = TextAreaField('Body', [validators.length(min=30)])
+@is_logged_in
+@app.route('/add_article', methods=['GET','POST'])
+
+def add_article():
+    form = ArticleForm(request.form)
+    if request.method == 'POST' and form.validate():
+        title = form.title.data
+        body = form.body.data
+
+        # Create cursor
+        cur = mysql.connection.cursor()
+
+        #Execute
+
+        cur.execute("INSERT INTO articles(title, body,author) VALUES(%s, %s, %S)", (title, body, session['username']))
+
+        # Commit to DB
+
+        mysql.connection.commit()
+
+        #Close connection
+
+        cur.close()
+
+        flash('Article created', 'success')
+
+        return redirect(url_for('dashboard'))
+
+    return render_template('add_article.html', form=form)
+# Dashboard
+
 @app.route('/dashboard')
+@is_logged_in
 def dashboard():
     return render_template('dashboard.html')
 
