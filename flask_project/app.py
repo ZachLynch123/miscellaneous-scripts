@@ -118,7 +118,7 @@ def login():
                 session['logged_in'] = True
                 session['username'] = username
                 flash('You are now logged in', 'success')
-                return redirect(url_for('dashboard.html'))
+                return redirect(url_for('dashboard'))
 
             else:
                 error = 'Invalid login'
@@ -131,6 +131,9 @@ def login():
             return render_template('login.html', error=error)
 
     return render_template('login.html')
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
 
 
 if __name__ =='__main__':
