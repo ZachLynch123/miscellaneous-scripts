@@ -23,7 +23,7 @@ mysql = MySQL(app)
 
 
 # call function Articles in data.py
-Articles = Articles()
+# Articles = Articles() No longer calling from separate file, now from MySQL DB
 
 # route home screen (basically so the browser has an address to read I think
 @app.route('/')
@@ -31,6 +31,8 @@ Articles = Articles()
 # call the html file
 def index():
     return render_template('home.html')
+
+# Try to make dice roller in flask
 
 # routes about
 @app.route('/about')
@@ -43,14 +45,32 @@ def about():
 
 # adds a variable to the articles.html
 def articles():
-    return render_template('articles.html', articles=Articles)
+    # Create cursor
+    cur = mysql.connection.cursor()
+    msg = 'No Articles Found'
+    # Get articles
+    result = cur.execute("SELECT * FROM articles")
+
+    articles = cur.fetchall()
+
+    if result > 0:
+        return render_template('articles.html', articles=articles)
+    else:
+        return render_template('articles.html', msg=msg)
 
 # adds a variable to the address
 @app.route('/article/<string:id>/')
 
 # Single artice
 def article_id(id):
-    return render_template('article.html', id=id)
+    # Create cursor
+    cur = mysql.connection.cursor()
+
+    # Create article
+    result = cur.execute("SELECT * FROM articles WHERE id = %s",[id])
+    article = cur.fetchone()
+
+    return render_template('article.html', article=article)
 @app.route('/testing')
 
 def testing():
