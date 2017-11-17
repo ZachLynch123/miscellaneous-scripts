@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <title>TreasureGram</title>
 </head>
+<!--
+ Interesting.. Django uses the same template formatting language as flask..
+ They don't seem to be that different after all! :D
+ --->
 <body>
     <h1>TreasureGram</h1>
-    <p>{{ treasure_name }}</p>
-    <p>{{ treasure_value }}</p>
+    <!--For loop in HTML template --->
+    {% for treasure in treasures %}
+        <p>{{ treasure.name }}</p>
+        <p>{{ treasure.value }}</p>
+    {% endfor %}
 </body>
 </html>

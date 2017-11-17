@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-
+# So many comments @ _ @
 # Create your views here.
 
 def index(request):
