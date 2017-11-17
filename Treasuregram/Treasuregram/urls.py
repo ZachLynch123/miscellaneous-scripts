@@ -25,5 +25,5 @@ urlpatterns = [
     # Instead of using urls.py in the project file to dispatch urls, each "app"
     # of the project will dispatch their own url using their specific url.py
     url(r'^',
-        include('main_app.url'))
+        include('main_app.urls'))
 ]
