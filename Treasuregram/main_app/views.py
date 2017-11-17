@@ -31,7 +31,7 @@ class Treasure:
     #Then we can create a Treasure object and set it's attributes with one line of code
 treasures = [
     Treasure('Gold Nugget', 500.00, 'gold', 'El Dorado, Nevada'),
-    Treasure("Fool's Gold", 0.25, 'Pyrite', 'Idiot creek, Kentucky'),
+    Treasure("Fool's Gold", 0, 'Pyrite', 'Idiot creek, Kentucky'),
     Treasure('Coffee can?', 3.00, 'tin', 'Mojave Desert, Arizona')
 # Treasure class with be replaced with a database later..
 ]

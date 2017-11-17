@@ -1,19 +1,30 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>TreasureGram</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css'%}"/>
 </head>
 <!--
  Interesting.. Django uses the same template formatting language as flask..
  They don't seem to be that different after all! :D
  --->
 <body>
+    <nav class="navbar navbar-default navbar-static-top text-center"></nav>
+    <a href="/">
+        <img src="{% static 'images/favicon.png %}" alt="Logo"/>
+    </a>
     <h1>TreasureGram</h1>
     <!--For loop in HTML template --->
     {% for treasure in treasures %}
         <p>{{ treasure.name }}</p>
-        <p>{{ treasure.value }}</p>
+    {% if treasure.value > 0 %}
+            <p>{{ treasure.value }}</p>
+    {% else %}
+        <p>Unknown</p>
+    {% endif %}
     {% endfor %}
 </body>
 </html>
