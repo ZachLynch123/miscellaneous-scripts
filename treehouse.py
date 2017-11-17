@@ -1,8 +1,7 @@
-print("Hello")
-name = 'Zach'
-print(name)
+curcount = 14
+planned = 5
+release = 2
 
-print("Let's do some math!")
-print(5 + 5)
+del planned
 
-print("Thanks for playing along!")
+total = curcount + release
