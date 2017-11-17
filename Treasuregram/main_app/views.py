@@ -18,3 +18,20 @@ def index(request):
 
     # Pass context as third argument in render function
     return render(request, 'index.html', context)
+
+# What if you want to pass more than 1 treasure? Create a class. (OOP basics)
+
+class Treasure:
+    # define init function and store attributes
+    def __init__(self, name, value, material, location):
+        self.name = name
+        self.value = value
+        self.material = material
+        self.location = location
+    #Then we can create a Treasure object and set it's attributes with one line of code
+treasures = [
+    Treasure('Gold Nugget', 500.00, 'gold', 'El Dorado, Nevada'),
+    Treasure("Fool's Gold", 0.25, 'Pyrite', 'Idiot creek, Kentucky'),
+    Treasure('Coffee can?', 3.00, 'tin', 'Mojave Desert, Arizona')
+# Treasure class with be replaced with a database later..
+]
