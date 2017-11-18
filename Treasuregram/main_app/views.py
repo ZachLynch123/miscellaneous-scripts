@@ -30,8 +30,10 @@ class Treasure:
         self.location = location
     #Then we can create a Treasure object and set it's attributes with one line of code
 treasures = [
-    Treasure('Gold Nugget', 500.00, 'gold', 'El Dorado, Nevada'),
-    Treasure("Fool's Gold", 0, 'Pyrite', 'Idiot creek, Kentucky'),
-    Treasure('Coffee can?', 3.00, 'tin', 'Mojave Desert, Arizona')
+    Treasure('Sushi', 25.00, 'Delicious raw fish', '#'),
+    Treasure("Sushi.. again", 30.00, 'Just checking to see if this works', '#'),
+    Treasure('Coffee can?', 20.00, 'does it work?', '#')
 # Treasure class with be replaced with a database later..
+    # Decided not to use "treasures" but to instead implement my own stuff from
+    # Start up
 ]

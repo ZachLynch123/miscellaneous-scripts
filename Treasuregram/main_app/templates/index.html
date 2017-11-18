@@ -12,19 +12,28 @@
  They don't seem to be that different after all! :D
  --->
 <body>
-    <nav class="navbar navbar-default navbar-static-top text-center"></nav>
+    <nav class="navbar navbar-default navbar-static-top text-center">
     <a href="/">
-        <img src="{% static 'images/favicon.png %}" alt="Logo"/>
-    </a>
-    <h1>TreasureGram</h1>
-    <!--For loop in HTML template --->
-    {% for treasure in treasures %}
-        <p>{{ treasure.name }}</p>
-    {% if treasure.value > 0 %}
-            <p>{{ treasure.value }}</p>
-    {% else %}
-        <p>Unknown</p>
-    {% endif %}
-    {% endfor %}
-</body>
+        <img src="{% static 'images/favicon.png' %}" alt="Logo"/>
+    </a> </nav>
+    <main class="container" role="main">
+        <div class="treasure panel panel-primary">
+            {% for treasure in treasures %}
+            <div clas="panel-heading">
+                <h2 class="panel-title">{{ treasure.name }}</h2>
+            </div>
+            <div class="panel-body">
+                <table class="treasure-table">
+                    <tr>
+                        <th>
+                {{ treasure.material }}
+                {% if treasure.value > 0 %}
+                    {{ treasure.value }}
+                {% else %}
+                    {{ Unknown }}
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </main>
 </html>
