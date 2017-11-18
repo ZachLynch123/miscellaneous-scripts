@@ -17,23 +17,22 @@ def index(request):
 
 
     # Pass context as third argument in render function
-    return render(request, 'index.html', {'treasures': treasures})
+    return render(request, 'index.html', {'menu': menu})
 
 # What if you want to pass more than 1 treasure? Create a class. (OOP basics)
 
-class Treasure:
+class Menu:
     # define init function and store attributes
-    def __init__(self, name, value, material, location):
+    def __init__(self, name, value, material, location, img_url):
         self.name = name
         self.value = value
         self.material = material
         self.location = location
-    #Then we can create a Treasure object and set it's attributes with one line of code
-treasures = [
-    Treasure('Sushi', 25.00, 'Delicious raw fish', '#'),
-    Treasure("Sushi.. again", 30.00, 'Just checking to see if this works', '#'),
-    Treasure('Coffee can?', 20.00, 'does it work?', '#')
-# Treasure class with be replaced with a database later..
-    # Decided not to use "treasures" but to instead implement my own stuff from
-    # Start up
+        self.img_url = img_url
+    #Then we can create a Menu object and set it's attributes with one line of code
+menu = [
+    Menu('Sushi', 25.00, 'Delicious raw fish', '#','main_app/static/images/sushi.jpg'),
+    Menu("Sushi.. again", 30.00, 'Just checking to see if this works', '#','/Users/Zach/Desktop/pythonprojects/Treasuregram/main_app/static/images/sushi.jpg'),
+    Menu('Coffee can?', 20.00, 'does it work?', '#','/Users/Zach/Desktop/pythonprojects/Treasuregram/main_app/static/images/sushi.jpg')
+# Menu class with be replaced with a database later..
 ]

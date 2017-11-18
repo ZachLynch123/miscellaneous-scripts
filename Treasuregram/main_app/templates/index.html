@@ -17,23 +17,41 @@
         <img src="{% static 'images/favicon.png' %}" alt="Logo"/>
     </a> </nav>
     <main class="container" role="main">
-        <div class="treasure panel panel-primary">
-            {% for treasure in treasures %}
+        <div class="menu panel panel-primary">
+            {% for menu in menu %}
             <div clas="panel-heading">
-                <h2 class="panel-title">{{ treasure.name }}</h2>
+                <h2 class="panel-title">{{ menu.name }}</h2>
             </div>
             <div class="panel-body">
+                <div class="treasure-photo">
+                    <img src="{{ menu.img_url }}" width="25%"/>
+                </div>
                 <table class="treasure-table">
                     <tr>
                         <th>
-                {{ treasure.material }}
-                {% if treasure.value > 0 %}
-                    {{ treasure.value }}
-                {% else %}
-                    {{ Unknown }}
-                {% endif %}
+                             <img src="http://www.free-icons-download.net/images/frying-pan-icon-15619.png" style width="10%"/>
+                            Material:
+                        </th>
+                        <td>{{ menu.material }}</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/location-128.png" style width="10%"/>
+                            Value:
+                        </th>
+                        <td>{{ menu.value }}</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="https://image.flaticon.com/icons/png/128/126/126157.png" style width="10%"/>
+                            Location:
+                        </th>
+                        <td>{{ menu.location }}</td>
+                    </tr>
+                </table>
             </div>
             {% endfor %}
         </div>
     </main>
+</body>
 </html>
