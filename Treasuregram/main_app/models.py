@@ -4,10 +4,11 @@ from django.db import models
 
 # Create your models here.
 
-#class Treasure(models.Model):
+class Treasure(models.Model):
 
-   # name = models.CharField()
-   # value = models.DecimalField()
-   ## material = models.CharField()
-   # location = models.CharField()
-    #img_url = models.CharField()
+    name = models.CharField(max_length=100)
+    value = models.DecimalField(max_length=10,
+                                decimal_places=2,max_digits=10)
+    material = models.CharField(max_length=100)
+    location = models.CharField(max_length=100)
+    img_url = models.CharField(max_length=100)
