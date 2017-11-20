@@ -31,8 +31,8 @@ class Menu:
         self.img_url = img_url
     #Then we can create a Menu object and set it's attributes with one line of code
 menu = [
-    Menu('Sushi', 25.00, 'Delicious raw fish', '#','main_app/static/images/sushi.jpg'),
-    Menu("Sushi.. again", 30.00, 'Just checking to see if this works', '#','/Users/Zach/Desktop/pythonprojects/Treasuregram/main_app/static/images/sushi.jpg'),
-    Menu('Coffee can?', 20.00, 'does it work?', '#','/Users/Zach/Desktop/pythonprojects/Treasuregram/main_app/static/images/sushi.jpg')
+    Menu('Sushi', 25.00, 'Delicious raw fish', '#','/static/images/sushi.jpg'),
+    Menu("Sushi.. again", 30.00, 'Just checking to see if this works', '#','/static/images/sushi.jpg'),
+    Menu('Coffee can?', 20.00, 'does it work?', '#','/static/images/sushi.jpg')
 # Menu class with be replaced with a database later..
 ]
