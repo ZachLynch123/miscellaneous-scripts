@@ -14,9 +14,12 @@ Including another URLconf
     2. Import the include() function: from django.conf.urls import url, include
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import url
+from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+# Whenever a URL is requested with '... .com/music/*' look in the file music.urls
+    # For all instructions for handling music app
+    url(r'^music/', include('music.urls')),
 ]
