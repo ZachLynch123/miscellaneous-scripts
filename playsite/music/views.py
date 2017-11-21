@@ -9,7 +9,7 @@ def index(request):
     # V using django.template loader
     # template = loader.get_template('music/index.html')
     context = {'all_albums': all_albums,}
-    # Commenting everything out
+    # Commenting everything out 
     #html = ''
     # For loop that displays album title that when clicked
     # Will take them to the detailed page of the Album with songs,a =  artist etc.
