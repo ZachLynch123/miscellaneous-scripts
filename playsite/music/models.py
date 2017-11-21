@@ -10,6 +10,9 @@ class Album(models.Model):
     genre = models.CharField(max_length=100)
     album_logo = models.CharField(max_length=1000)
 
+    def __str__(self):
+        return self.album_title + ' - ' + self.artist
+
 class Song(models.Model):
     # on_delete models.CASCADE
     # okay so since you have a song, and it needs to be part of an album
