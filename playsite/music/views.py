@@ -1,6 +1,4 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-# from django.template import loader
+from django.http import Http404
 from .models import Album
 from django.shortcuts import render
 # Create your views here.
@@ -21,7 +19,11 @@ def index(request):
     return render(request,'music/index.html', context)
 
 def detail(request, album_id):
-    return HttpResponse("<h2>Detaisl for Album_id: " + str(album_id) + "</h2>")
+    try:
+        album = Album.objects.get(pk=album_id)
+    except Album.DoesNotExist:
+        raise Http404("Album not found")
+    return render(request,'music/index.html', {'album': album})
 
 # Connected to the database and got all albums. For each album, I looped through it and displayed it in the HTTPResponse
 # when clicked takes you to the detailed page.
