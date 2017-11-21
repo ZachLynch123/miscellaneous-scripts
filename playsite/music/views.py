@@ -18,3 +18,6 @@ def index(request):
 
 def detail(request, album_id):
     return HttpResponse("<h2>Detaisl for Album_id: " + str(album_id) + "</h2>")
+
+# Connected to the database and got all albums. For each album, I looped through it and displayed it in the HTTPResponse
+# when clicked takes you to the detailed page.
