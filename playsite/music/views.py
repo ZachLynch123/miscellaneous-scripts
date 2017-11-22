@@ -8,6 +8,7 @@ def index(request):
     all_albums = Album.objects.all()
     # V using django.template loader
     # template = loader.get_template('music/index.html')
+    context = {'all_albums': all_albums,}
     # Commenting everything out
     #html = ''
     # For loop that displays album title that when clicked
