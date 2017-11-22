@@ -8,8 +8,7 @@ def index(request):
     all_albums = Album.objects.all()
     # V using django.template loader
     # template = loader.get_template('music/index.html')
-    context = {'all_albums': all_albums,}
-    # Commenting everything out 
+    # Commenting everything out
     #html = ''
     # For loop that displays album title that when clicked
     # Will take them to the detailed page of the Album with songs,a =  artist etc.
@@ -23,7 +22,7 @@ def detail(request, album_id):
         album = Album.objects.get(pk=album_id)
     except Album.DoesNotExist:
         raise Http404("Album not found")
-    return render(request,'music/index.html', {'album': album})
+    return render(request,'music/detail.html', {'album': album})
 
 # Connected to the database and got all albums. For each album, I looped through it and displayed it in the HTTPResponse
 # when clicked takes you to the detailed page.
