@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from . import views
-
+# Added app_name and added it to index.html so that when other apps have the same 'detail' url, django knows which
+#  detail.html to look for
 app_name = 'music'
 
 # Create music
