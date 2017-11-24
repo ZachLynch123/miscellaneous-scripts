@@ -14,11 +14,18 @@
         <input type="radio" id="song{{  forloop.counter  }}" name="song" value="{{  song.id  }}"/>
         <label for="song{{  forloop.counter  }}">
             {{ song.song_title }}
-            {% if song.is_favorite %}
-                <img src="i.imgur.com/b9b13Rd.png">
+            {% if song.is_fav %}
+                <img src="imgur.com/b9b13Rd.png">
+                <p>whoa</p>
+            {% else %}
+                <p>wat</p>
             {% endif %}
         </label><br>
     {% endfor %}
+    <input type="submit" value="Fav">
+    <input type="submit" value="Unfav">
+
+
 </form>
 
 

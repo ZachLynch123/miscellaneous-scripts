@@ -1,4 +1,4 @@
-from .models import Album
+from .models import Album, Song
 from django.shortcuts import render, get_object_or_404
 # Create your views here.
 
@@ -29,5 +29,31 @@ def detail(request, album_id):
 # Connected to the database and got all albums. For each album, I looped through it and displayed it in the HTTPResponse
 # when clicked takes you to the detailed page.
 # Notice how clean this looks without all the comments
-# Theres a lot of logic going on in like 12 lines of code
+# There's a lot of logic going on in like 12 lines of code
 
+def favorite(request, album_id):
+    album = get_object_or_404(Album, pk=album_id)
+    try: # get the value of whatever song user selected
+        selected_song = album.song_set.get(pk=request.POST['song'])
+    except (KeyError,Song.DoesNotExist):
+        return render(request, 'music/detail.html', {
+            'album':album,
+            'error message': "select a valid song",
+        })
+    else:
+        selected_song.is_fav = True
+        selected_song.save()
+    return render(request,'music/detail.html', {'album': album},)
+
+
+def unfav(request, album_id):
+    album = get_object_or_404(Album, pk=album_id)
+    try:
+        selected_song = album.song_set.get(pk=request.POST['song'])
+    except (KeyError, Song.DoesNotExist):
+        return render(request, 'music/detail.html', {'album':album,
+            'error message': "select a valid song"})
+    else:
+        selected_song.is_fav = False
+        selected_song.save()
+    return render(request,'music/detail.html', {'album': album})
