@@ -3,7 +3,6 @@
 
 {% block body %}
     {% if all_albums %}
-        <h3>This is a list of albums: </h3>
         <ul>
             {% for album in all_albums %} <!--dynamically calls urls for albums--->
             <li><a href="{% url 'music:detail' album.id %}">{{album.album_title}}</a></li>
