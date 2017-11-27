@@ -9,3 +9,4 @@ def n_digits_combs(n):
 def n_digits_combs_wr(n):
     for comb in combinations_with_replacement(digits, n):
         print(("{}"*n).format(*comb))
+        #
