@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d96f47b-0a3c-43f0-8a5f-1a107e91f86c" name="Default" comment="test commit?">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/templates/music/detail.html" afterPath="$PROJECT_DIR$/music/templates/music/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music/templates/music/index.html" afterPath="$PROJECT_DIR$/music/templates/music/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playsite/urls.py" afterPath="$PROJECT_DIR$/playsite/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,12 +30,12 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/music/templates/music/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="25" column="49" lean-forward="true" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+            <state relative-caret-position="174">
+              <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#2303#2309#0" expanded="true" />
-                <element signature="e#3819#3825#0" expanded="true" />
+                <element signature="e#2307#2313#0" expanded="true" />
+                <element signature="e#3823#3829#0" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#a#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -43,13 +45,13 @@
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/music/templates/music/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="59" column="98" lean-forward="false" selection-start-line="59" selection-start-column="98" selection-end-line="59" selection-end-column="98" />
+            <state relative-caret-position="256">
+              <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#2386#2392#0" expanded="true" />
+                <element signature="e#2390#2396#0" expanded="true" />
                 <element signature="n#style#0;n#form#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#3238#3244#0" expanded="true" />
+                <element signature="e#3242#3248#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,6 +79,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/playsite/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="30" column="66" lean-forward="true" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
+              <folding>
+                <element signature="e#697#738#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/music/models.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -94,16 +108,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="167">
               <caret line="120" column="59" lean-forward="true" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/playsite/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -141,12 +145,12 @@
         <option value="$PROJECT_DIR$/music/templates/music/form-template.html" />
         <option value="$PROJECT_DIR$/music/views.py" />
         <option value="$PROJECT_DIR$/../game.py" />
-        <option value="$PROJECT_DIR$/music/templates/music/index.html" />
-        <option value="$PROJECT_DIR$/music/templates/music/detail.html" />
         <option value="$PROJECT_DIR$/music/urls.py" />
         <option value="$PROJECT_DIR$/music/models.py" />
-        <option value="$PROJECT_DIR$/playsite/urls.py" />
         <option value="$PROJECT_DIR$/playsite/settings.py" />
+        <option value="$PROJECT_DIR$/music/templates/music/index.html" />
+        <option value="$PROJECT_DIR$/music/templates/music/detail.html" />
+        <option value="$PROJECT_DIR$/playsite/urls.py" />
       </list>
     </option>
   </component>
@@ -441,8 +445,8 @@
           <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#2303#2309#0" expanded="true" />
-            <element signature="e#3819#3825#0" expanded="true" />
+            <element signature="e#2307#2313#0" expanded="true" />
+            <element signature="e#3823#3829#0" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -517,32 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/music/templates/music/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="25" column="49" lean-forward="true" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#2303#2309#0" expanded="true" />
-            <element signature="e#3819#3825#0" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/music/templates/music/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="59" column="98" lean-forward="false" selection-start-line="59" selection-start-column="98" selection-end-line="59" selection-end-column="98" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#2386#2392#0" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#3238#3244#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/music/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -550,24 +528,6 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/music/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/music/templates/music/album_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -589,11 +549,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/music/templates/music/album_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music/templates/music/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#2307#2313#0" expanded="true" />
+            <element signature="e#3823#3829#0" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music/templates/music/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#2390#2396#0" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#3242#3248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/playsite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="289">
+          <caret line="30" column="66" lean-forward="true" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
+          <folding>
+            <element signature="e#697#738#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
