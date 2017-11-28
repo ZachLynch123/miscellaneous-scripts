@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d96f47b-0a3c-43f0-8a5f-1a107e91f86c" name="Default" comment="test commit?">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-    </list>
+    <list default="true" id="7d96f47b-0a3c-43f0-8a5f-1a107e91f86c" name="Default" comment="test commit?" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,8 +78,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/playsite/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="24" column="49" lean-forward="true" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+            <state relative-caret-position="257">
+              <caret line="30" column="78" lean-forward="false" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
               <folding>
                 <element signature="e#697#738#0" expanded="true" />
               </folding>
@@ -598,8 +596,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/playsite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="24" column="49" lean-forward="true" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+        <state relative-caret-position="257">
+          <caret line="30" column="78" lean-forward="false" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
           <folding>
             <element signature="e#697#738#0" expanded="true" />
           </folding>
