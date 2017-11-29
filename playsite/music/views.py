@@ -1,9 +1,11 @@
-from .models import Album, Song
-from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Album
 from django.views.generic.edit import CreateView,UpdateView,DeleteView
 from django.core.urlresolvers import reverse_lazy
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
+from django.views.generic import View
+from .forms import UserForm
 
 # Create your views here.
 
