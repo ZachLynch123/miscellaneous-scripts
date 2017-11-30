@@ -67,5 +67,5 @@ class UserFormView(View):
                     login(request,user)
                     return redirect('music:index')
 
-
+        return render(request, self.template_name,{'form':form})
 
