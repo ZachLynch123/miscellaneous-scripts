@@ -229,6 +229,12 @@ def dashboard():
     # Close connection
     cur.close()
 
+@app.route('/roller', methods=['GET','POST'])
+def roller():
+    num1 = TextAreaField('Number 1')
+    num2 = TextAreaField
+    return render_template('roller.html',list=list)
+
 
 if __name__ =='__main__':
     app.secret_key = 'secret123'

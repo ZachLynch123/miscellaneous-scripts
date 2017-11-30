@@ -11,8 +11,6 @@ urlpatterns = [
     url(r'^$', views.IndexView.as_view(), name='index'),
     url(r'^register/$', views.UserFormView.as_view(), name='register'),
 
-    #  /music/<albumid>/
-
     url(r'^(?P<pk>[0-9]+)/$', views.DetailsView.as_view(), name='detail'),
      # /music/<albumid>/add
     url(r'^album/add/$', views.AlbumCreate.as_view(), name='album-add'),
@@ -20,5 +18,6 @@ urlpatterns = [
     url(r'^album/(?P<pk>[0-9]+)/$', views.AlbumUpdate.as_view(), name='album-update'),
     # /music/album/2/delete
     url(r'^(?P<pk>[0-9]+)/delete/$', views.AlbumDelete.as_view(), name='album-delete'),
+
 
 ]

@@ -22,8 +22,8 @@ class Song(models.Model):
     # to that specific album. So that there are no random floating songs without a
     # respective album
     album = models.ForeignKey(Album, on_delete=models.CASCADE)
-    file_type = models.CharField(max_length=10)
     song_title = models.CharField(max_length=250)
+    audio_file = models.FileField(default='')
     is_fav = models.BooleanField(default=False)
 
     def __str__(self):
