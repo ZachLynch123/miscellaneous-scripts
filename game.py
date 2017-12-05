@@ -1,7 +1,6 @@
 # This exercise helps teach control flow
 import random
 
-
 def main():
     play = True
     while play == True:
@@ -14,7 +13,6 @@ def main():
                 play = True
             elif keep_playing in ['n','N'] :
                 play = False
-
         else:
             print('please try again\n \n')
 
